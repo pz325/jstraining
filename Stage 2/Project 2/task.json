@@ -1,0 +1,5 @@
+{
+  "input": "some input text from JSON from server",
+  "a": 2,
+  "b": 5
+}

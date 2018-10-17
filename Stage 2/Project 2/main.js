@@ -81,6 +81,25 @@ const start = () => {
 
   const buttonLoadTaskDefXML = document.getElementById("buttonLoadTaskDefXML");
   buttonLoadTaskDefXML.onclick = buttonLoadTaskDefXMLHandler;
+
+  const buttonLoadTaskDefServer = document.getElementById(
+    "buttonLoadTaskDefServer"
+  );
+  buttonLoadTaskDefServer.onclick = loadTaskJSON;
+};
+
+const loadTaskJSON = () => {
+  const url =
+    "http://localhost:8005/github/jstraining/Stage%202/Project%202/task.json";
+
+  fetch(url)
+    .then(resp => {
+      return resp.json();
+    })
+    .then(json => {
+      const encrypted = runEncyptJob(json);
+      outputEncrypted(encrypted);
+    });
 };
 
 document.addEventListener("DOMContentLoaded", start);
