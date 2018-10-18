@@ -5,11 +5,13 @@
     b: 2
 }
  */
+// this is actually an Object. Not JSON in String
 const taskDefInJSON = {
   input: "some input text from JSON",
   a: 2,
   b: 5
 };
+
 
 const taskDefInXML =
   "<task><input>some input text from XML</input><a>2</a><b>5</b></task>";
